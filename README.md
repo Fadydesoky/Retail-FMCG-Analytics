@@ -103,6 +103,19 @@ Model information, evaluation metrics, and the regression workflow.
 ### 🔮 Prediction
 Interactive **Margin Prediction** using the trained model.
 
+## 📊 Power BI Dashboards
+
+The project includes interactive Power BI dashboards for monitoring
+sales, profitability, inventory performance, and operational efficiency.
+
+### 💰 Profitability & Sales Performance
+
+![Profitability & Sales Performance](images/profitability-sales.jpeg)
+
+### 📦 Inventory & Stock Performance
+
+![Inventory & Stock Performance](images/inventory-stock.jpeg)
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
