@@ -110,11 +110,11 @@ sales, profitability, inventory performance, and operational efficiency.
 
 ### 💰 Profitability & Sales Performance
 
-![Profitability & Sales Performance](images/profitability-sales.jpeg)
+![Profitability & Sales Performance](images/inventory-stock.jpeg)
 
 ### 📦 Inventory & Stock Performance
 
-![Inventory & Stock Performance](images/inventory-stock.jpeg)
+![Inventory & Stock Performance](images/profitability-sales.jpeg)
 
 ## 🛠️ Tech Stack
 
