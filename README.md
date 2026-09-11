@@ -195,11 +195,11 @@ This demonstrates the transition from analytical modeling to an interactive, use
 
 ### 💰 Profitability & Sales Performance
 
-[![Profitability & Sales Performance](images/powerbi-profitability-sales.jpg)](images/powerbi-profitability-sales.jpg)
+[![Profitability & Sales Performance](images/powerbi-profitability-sales.jpg)](images/powerbi-profitability-sales.jpeg)
 
 ### 📦 Inventory & Stock Performance
 
-[![Inventory & Stock Performance](images/powerbi-inventory-stock.jpg)](images/powerbi-inventory-stock.jpg)
+[![Inventory & Stock Performance](images/powerbi-inventory-stock.jpg)](images/powerbi-inventory-stock.jpeg)
 
 ## 🛠️ Tech Stack
 
