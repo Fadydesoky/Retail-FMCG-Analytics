@@ -111,19 +111,42 @@ The deployed Streamlit application provides an interactive interface for busines
 
 #### 🏠 Overview
 
+<details>
+<summary>▶️ Click to show Streamlit Overview</summary>
+
 ![Streamlit Overview](images/streamlit-overview.png)
+
+</details>
 
 #### 📊 Business Analytics
 
+<details>
+<summary>▶️ Click to show Business Analytics</summary>
+
 ![Streamlit Analytics](images/streamlit-analytics.png)
+
+</details>
+
 
 #### 🤖 Machine Learning
 
+<details>
+<summary>▶️ Click to show Machine Learning</summary>
+
 ![Streamlit Machine Learning](images/streamlit-machine-learning.png)
+
+</details>
+
 
 #### 🔮 Margin Prediction
 
+<details>
+<summary>▶️ Click to show Margin Prediction</summary>
+
 ![Streamlit Prediction](images/streamlit-prediction.png)
+
+</details>
+
 
 ### 📊 Power BI Dashboards
 
@@ -131,11 +154,21 @@ The project also includes interactive Power BI dashboards for sales, profitabili
 
 #### 💰 Profitability & Sales Performance
 
-![Power BI Profitability and Sales Performance](images/powerbi-profitability-sales.jpg)
+<details>
+<summary>▶️ Click to show Profitability & Sales Performance</summary>
+
+![Profitability & Sales Performance](images/powerbi-profitability-sales.jpg)
+
+</details>
 
 #### 📦 Inventory & Stock Performance
 
-![Power BI Inventory and Stock Performance](images/powerbi-inventory-stock.jpg)
+<details>
+<summary>▶️ Click to show Inventory & Stock Performance</summary>
+
+![Inventory & Stock Performance](images/powerbi-inventory-stock.jpg)
+
+</details>
 
 ## 🛠️ Tech Stack
 
