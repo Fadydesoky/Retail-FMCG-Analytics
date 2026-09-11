@@ -1,0 +1,20 @@
+{
+  "model": "Linear Regression",
+  "target": "Margin",
+  "test_size": 0.2,
+  "random_state": 42,
+  "metrics": {
+    "MAE": 19.27668478555632,
+    "MSE": 763.8711834065783,
+    "RMSE": 27.63821961354563,
+    "R2": 0.8627504292948406
+  },
+  "dropped_columns": [
+    "Margin",
+    "Margin_%",
+    "Revenue",
+    "Cost",
+    "Invoice_ID"
+  ],
+  "note": "Deployment-ready robust preprocessing; date decomposed into numeric features."
+}
