@@ -103,7 +103,7 @@ elif page == "🔍 Data Quality":
 elif page == "🤖 Machine Learning":
     st.title("🤖 Machine Learning")
     st.markdown("### Regression Target: `Margin`")
-    st.write("The deployment model uses the same project logic: target/leakage columns are excluded, categorical variables are encoded, numerical missing values are imputed, features are scaled, and the data is split 80/20.")
+    st.write("The deployment uses the finalized Linear Regression workflow from the project modeling notebook: feature engineering, categorical encoding, 80/20 train-test split, StandardScaler, and Linear Regression.")
 
     m=info["metrics"]
     c1,c2,c3,c4=st.columns(4)
@@ -112,47 +112,81 @@ elif page == "🤖 Machine Learning":
     c3.metric("RMSE",f"{m['RMSE']:.2f}")
     c4.metric("R²",f"{m['R2']:.4f}")
 
-    st.info("This deployment artifact was retrained from the supplied project CSV with a robust preprocessing pipeline so missing customer age/gender values do not break prediction.")
+    st.info("Deployment model aligned with the executed project modeling workflow and its final Linear Regression results.")
 
 elif page == "🎯 Prediction":
     st.title("🎯 Margin Prediction")
-    st.write("Enter a transaction profile and predict its gross margin.")
+    st.write("Enter a transaction profile and predict its gross margin using the finalized Linear Regression model.")
 
-    drop=["Margin","Margin_%","Revenue","Cost","Invoice_ID"]
-    feature_df=df.drop(columns=drop)
-    if "Invoice_Date" in feature_df:
-        feature_df=feature_df.drop(columns=["Invoice_Date"])
+    # The executed project model uses these original business features.
+    # Product is intentionally excluded because the modeling notebook removes
+    # categorical columns with more than 100 unique values.
+    input_cols = [
+        "City", "Store_Format", "Category", "Brand", "Channel", "Payment_Mode",
+        "Units", "Cost_Price", "Selling_Price", "Stock_On_Hand",
+        "Reorder_Level", "Lead_Time_Days", "Customer_Age",
+        "Customer_Gender", "Loyalty_Flag"
+    ]
 
-    original_cols=feature_df.columns.tolist()
-    values={}
-    cols=st.columns(2)
-    for i,col in enumerate(original_cols):
-        with cols[i%2]:
-            if pd.api.types.is_numeric_dtype(feature_df[col]):
-                med=float(feature_df[col].median()) if pd.notna(feature_df[col].median()) else 0.0
-                if col=="Customer_Age":
-                    values[col]=st.number_input(col,18.0,65.0,med)
-                elif col=="Units":
-                    values[col]=st.number_input(col,1,100, int(round(med)))
-                elif col in ["Loyalty_Flag"]:
-                    values[col]=st.selectbox(col,[0,1],index=int(round(med)))
+    values = {}
+    cols = st.columns(2)
+    for i, col in enumerate(input_cols):
+        with cols[i % 2]:
+            if pd.api.types.is_numeric_dtype(df[col]):
+                med = float(df[col].median())
+                if col == "Units":
+                    values[col] = st.number_input(col, min_value=1, max_value=100, value=int(round(med)))
+                elif col == "Customer_Age":
+                    values[col] = st.number_input(col, min_value=18.0, max_value=65.0, value=med)
+                elif col == "Loyalty_Flag":
+                    values[col] = st.selectbox(col, [0, 1], index=int(round(med)))
                 else:
-                    values[col]=st.number_input(col,value=med)
+                    values[col] = st.number_input(col, value=med)
             else:
-                opts=sorted(feature_df[col].dropna().astype(str).unique().tolist())
-                values[col]=st.selectbox(col,opts)
+                opts = sorted(df[col].dropna().astype(str).unique().tolist())
+                values[col] = st.selectbox(col, opts)
 
-    if st.button("Predict Margin",type="primary"):
-        row=pd.DataFrame([values])
-        # model handles preprocessing internally; add a valid date-derived row only if model expects it
-        # The saved pipeline was trained after decomposing Invoice_Date, so create date defaults.
-        # Since Invoice_Date was dropped from user inputs, supply a representative date.
-        row["Invoice_Year"]=2024
-        row["Invoice_Month"]=6
-        row["Invoice_Day"]=15
-        row["Invoice_Hour"]=12
-        row["Invoice_DayOfWeek"]=5
-        prediction=model.predict(row)[0]
+    prediction_date = st.date_input("Invoice Date", value=pd.Timestamp("2024-06-15").date())
+
+    if st.button("Predict Margin", type="primary"):
+        row = pd.DataFrame([values])
+
+        # Match the executed notebook's feature engineering exactly.
+        if pd.isna(values["Customer_Age"]):
+            row["Customer_Age_Missing"] = 1
+            row["Customer_Age"] = df["Customer_Age"].median()
+        else:
+            row["Customer_Age_Missing"] = 0
+
+        row["Year"] = prediction_date.year
+        row["Month"] = prediction_date.month
+        row["Day"] = prediction_date.day
+        row["Day_of_Week"] = prediction_date.weekday()
+
+        row["Revenue_Calc"] = row["Units"] * row["Selling_Price"]
+        row["Cost_Calc"] = row["Units"] * row["Cost_Price"]
+        row["Margin_Calc"] = row["Revenue_Calc"] - row["Cost_Calc"]
+
+        # Reproduce the notebook's categorical handling.
+        categorical_cols = row.select_dtypes(include=["object"]).columns.tolist()
+        for col in categorical_cols:
+            if col in row.columns and df[col].nunique() > 100:
+                row = row.drop(columns=[col])
+
+        row = pd.get_dummies(
+            row,
+            columns=row.select_dtypes(include=["object"]).columns.tolist(),
+            drop_first=True,
+            dtype=np.int8
+        )
+        row = row.apply(pd.to_numeric, errors="coerce")
+
+        # Align columns with the exact 47-feature training matrix.
+        expected_features = getattr(model, "feature_names_in_", None)
+        if expected_features is not None:
+            row = row.reindex(columns=expected_features, fill_value=0)
+
+        prediction = model.predict(row)[0]
         st.success(f"Predicted Margin: ₹{prediction:,.2f}")
 
 st.divider()

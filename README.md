@@ -5,7 +5,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Scikit--learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?logo=plotly&logoColor=white)](https://plotly.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](License)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## 📌 Project Overview
 
@@ -103,143 +103,39 @@ Model information, evaluation metrics, and the regression workflow.
 ### 🔮 Prediction
 Interactive **Margin Prediction** using the trained model.
 
-## 📊 Power BI Dashboards
+## 📸 Project Screenshots
 
-The project includes interactive Power BI dashboards for monitoring
-sales, profitability, inventory performance, and operational efficiency.
+### 🌐 Streamlit Application
 
+The deployed Streamlit application provides an interactive interface for business analytics, data exploration, machine learning evaluation, and real-time margin prediction.
 
-### 🏠 Streamlit Overview
-
-The Overview page provides a high-level summary of the Indian FMCG retail dataset and the deployed analytics solution.
-
-It presents key business indicators including:
-
-- **100,000** retail transactions
-- **21** dataset features
-- **₹39.34M** total revenue
-- **19.34%** average margin percentage
-
-The page also introduces the project scope, covering Business Analytics, Machine Learning, and interactive Streamlit deployment.
-
-<details>
-   
-<summary> ▶️ Click to show Streamlit Overview</summary>
-
+#### 🏠 Overview
 
 ![Streamlit Overview](images/streamlit-overview.png)
 
-</details>
-
-### 📊 Business Analytics
-
-The Analytics page provides interactive visualizations to explore sales and business performance across different dimensions.
-
-Key insights include:
-
-- Revenue by product category
-- Margin by city
-- Revenue distribution by sales channel
-- Margin performance by store format
-- Daily revenue trends throughout 2024
-
-These visualizations help transform transactional data into actionable business insights.
-
-<details>
-   
-<summary> ▶️ Click to show Business Analytics</summary>
-
+#### 📊 Business Analytics
 
 ![Streamlit Analytics](images/streamlit-analytics.png)
 
-</details>
-
-
-
-### 🤖 Machine Learning
-
-The Machine Learning module focuses on predicting **Margin** as the regression target.
-
-The deployed solution applies a complete preprocessing and modeling pipeline that includes:
-
-- Target and leakage-related feature exclusion
-- Categorical feature encoding
-- Missing-value imputation
-- Feature scaling
-- 80/20 train-test split
-- Regression model evaluation
-
-The deployed model is **Linear Regression**, with performance evaluated using:
-
-- **MAE** — Mean Absolute Error
-- **RMSE** — Root Mean Squared Error
-- **R²** — Coefficient of Determination
-
-<details>
-   
-<summary> ▶️ Click to show Machine Learning</summary>
-
+#### 🤖 Machine Learning
 
 ![Streamlit Machine Learning](images/streamlit-machine-learning.png)
 
-</details>
-
-### 🔮 Margin Prediction
-
-The Prediction module provides an interactive interface for estimating the gross margin of a retail transaction.
-
-Users can enter a transaction profile including:
-
-- City
-- Store Format
-- Category
-- Brand
-- Sales Channel
-- Payment Method
-- Units
-- Cost Price
-- Selling Price
-- Stock on Hand
-- Reorder Level
-- Lead Time
-- Customer Age
-- Customer Gender
-- Loyalty Flag
-
-After submitting the transaction profile, the deployed machine learning model generates an estimated **Margin** value.
-
-This demonstrates the transition from analytical modeling to an interactive, user-facing machine learning application.
-
-<details>
-   
-<summary> ▶️ Click to show Margin Prediction</summary>
-
+#### 🔮 Margin Prediction
 
 ![Streamlit Prediction](images/streamlit-prediction.png)
 
-</details>
+### 📊 Power BI Dashboards
 
-### 💰 Profitability & Sales Performance
+The project also includes interactive Power BI dashboards for sales, profitability, inventory, and operational performance.
 
-<details>
-   
-<summary> ▶️ Click to show Profitability & Sales Performance</summary>
+#### 💰 Profitability & Sales Performance
 
+![Power BI Profitability and Sales Performance](images/powerbi-profitability-sales.jpg)
 
-![Profitability & Sales Performance](images/inventory-stock.jpeg)
+#### 📦 Inventory & Stock Performance
 
-</details>
-
-### 📦 Inventory & Stock Performance
-
-<details>
-   
-<summary> ▶️ Click to show Inventory & Stock Performance</summary>
-
-
-![Inventory & Stock Performance](images/profitability-sales.jpeg)
-
-</details>
+![Power BI Inventory and Stock Performance](images/powerbi-inventory-stock.jpg)
 
 ## 🛠️ Tech Stack
 
@@ -284,9 +180,7 @@ streamlit run app.py
 
 **Streamlit Application:**
 
-🚀 **[Open Live Streamlit Application](https://retail-fmcg-analytics.streamlit.app/)**
-
-💻 **[View Source Code on GitHub](https://github.com/Fadydesoky/Retail-FMCG-Analytics)**
+https://retail-fmcg-analytics.streamlit.app/
 
 ## 👥 Prepared By
 
@@ -301,7 +195,7 @@ streamlit run app.py
 
 This project is licensed under the **MIT License**.
 
-See the [License](License) file for details.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
