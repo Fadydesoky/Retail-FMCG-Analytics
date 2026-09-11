@@ -108,6 +108,91 @@ Interactive **Margin Prediction** using the trained model.
 The project includes interactive Power BI dashboards for monitoring
 sales, profitability, inventory performance, and operational efficiency.
 
+
+### 🏠 Streamlit Overview
+
+The Overview page provides a high-level summary of the Indian FMCG retail dataset and the deployed analytics solution.
+
+It presents key business indicators including:
+
+- **100,000** retail transactions
+- **21** dataset features
+- **₹39.34M** total revenue
+- **19.34%** average margin percentage
+
+The page also introduces the project scope, covering Business Analytics, Machine Learning, and interactive Streamlit deployment.
+
+![Streamlit Overview](images/streamlit-overview.png)
+
+
+### 📊 Business Analytics
+
+The Analytics page provides interactive visualizations to explore sales and business performance across different dimensions.
+
+Key insights include:
+
+- Revenue by product category
+- Margin by city
+- Revenue distribution by sales channel
+- Margin performance by store format
+- Daily revenue trends throughout 2024
+
+These visualizations help transform transactional data into actionable business insights.
+
+![Streamlit Analytics](images/streamlit-analytics.png)
+
+
+### 🤖 Machine Learning
+
+The Machine Learning module focuses on predicting **Margin** as the regression target.
+
+The deployed solution applies a complete preprocessing and modeling pipeline that includes:
+
+- Target and leakage-related feature exclusion
+- Categorical feature encoding
+- Missing-value imputation
+- Feature scaling
+- 80/20 train-test split
+- Regression model evaluation
+
+The deployed model is **Linear Regression**, with performance evaluated using:
+
+- **MAE** — Mean Absolute Error
+- **RMSE** — Root Mean Squared Error
+- **R²** — Coefficient of Determination
+
+![Streamlit Machine Learning](images/streamlit-machine-learning.png)
+
+
+### 🔮 Margin Prediction
+
+The Prediction module provides an interactive interface for estimating the gross margin of a retail transaction.
+
+Users can enter a transaction profile including:
+
+- City
+- Store Format
+- Category
+- Brand
+- Sales Channel
+- Payment Method
+- Units
+- Cost Price
+- Selling Price
+- Stock on Hand
+- Reorder Level
+- Lead Time
+- Customer Age
+- Customer Gender
+- Loyalty Flag
+
+After submitting the transaction profile, the deployed machine learning model generates an estimated **Margin** value.
+
+This demonstrates the transition from analytical modeling to an interactive, user-facing machine learning application.
+
+![Streamlit Margin Prediction](images/streamlit-prediction.png)
+
+
 ### 💰 Profitability & Sales Performance
 
 ![Profitability & Sales Performance](images/inventory-stock.jpeg)
