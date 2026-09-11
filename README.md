@@ -122,8 +122,7 @@ It presents key business indicators including:
 
 The page also introduces the project scope, covering Business Analytics, Machine Learning, and interactive Streamlit deployment.
 
-![Streamlit Overview](images/streamlit-overview.png)
-
+[![Streamlit Overview](images/streamlit-overview.png)](images/streamlit-overview.png)
 
 ### 📊 Business Analytics
 
@@ -139,7 +138,8 @@ Key insights include:
 
 These visualizations help transform transactional data into actionable business insights.
 
-![Streamlit Analytics](images/streamlit-analytics.png)
+[![Streamlit Analytics](images/streamlit-analytics.png)](images/streamlit-analytics.png)
+
 
 
 ### 🤖 Machine Learning
@@ -161,7 +161,8 @@ The deployed model is **Linear Regression**, with performance evaluated using:
 - **RMSE** — Root Mean Squared Error
 - **R²** — Coefficient of Determination
 
-![Streamlit Machine Learning](images/streamlit-machine-learning.png)
+[![Streamlit Machine Learning](images/streamlit-machine-learning.png)](images/streamlit-machine-learning.png)
+
 
 
 ### 🔮 Margin Prediction
@@ -190,16 +191,15 @@ After submitting the transaction profile, the deployed machine learning model ge
 
 This demonstrates the transition from analytical modeling to an interactive, user-facing machine learning application.
 
-![Streamlit Margin Prediction](images/streamlit-prediction.png)
-
+[![Streamlit Prediction](images/streamlit-prediction.png)](images/streamlit-prediction.png)
 
 ### 💰 Profitability & Sales Performance
 
-![Profitability & Sales Performance](images/inventory-stock.jpeg)
+[![Profitability & Sales Performance](images/powerbi-profitability-sales.jpg)](images/powerbi-profitability-sales.jpg)
 
 ### 📦 Inventory & Stock Performance
 
-![Inventory & Stock Performance](images/profitability-sales.jpeg)
+[![Inventory & Stock Performance](images/powerbi-inventory-stock.jpg)](images/powerbi-inventory-stock.jpg)
 
 ## 🛠️ Tech Stack
 
@@ -244,7 +244,9 @@ streamlit run app.py
 
 **Streamlit Application:**
 
-https://retail-fmcg-analytics.streamlit.app/
+🚀 **[Open Live Streamlit Application](https://retail-fmcg-analytics.streamlit.app/)**
+
+💻 **[View Source Code on GitHub](https://github.com/Fadydesoky/Retail-FMCG-Analytics)**
 
 ## 👥 Prepared By
 
@@ -266,3 +268,5 @@ See the [License](License) file for details.
 ### ⭐ NTI Batch 9 — Advanced Data Analytics
 
 **Retail FMCG Sales Analytics | 2024**
+
+[⬆️ Back to Top](#-retail-fmcg-sales-analytics--nti-batch-9)
