@@ -161,7 +161,7 @@ https://retail-fmcg-analytics.streamlit.app/
 
 This project is licensed under the **MIT License**.
 
-See the [Retail-FMCG-Analytics](LICENSE) file for details.
+See the [License](License) file for details.
 
 ---
 
