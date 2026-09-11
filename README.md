@@ -226,7 +226,7 @@ This demonstrates the transition from analytical modeling to an interactive, use
 <summary> ▶️ Click to show Profitability & Sales Performance</summary>
 
 
-![Profitability & Sales Performance](images/profitability-sales.jpeg)
+![Profitability & Sales Performance](images/inventory-stock.jpeg)
 
 </details>
 
@@ -237,7 +237,7 @@ This demonstrates the transition from analytical modeling to an interactive, use
 <summary> ▶️ Click to show Inventory & Stock Performance</summary>
 
 
-![Inventory & Stock Performance](images/inventory-stock.jpeg)
+![Inventory & Stock Performance](images/profitability-sales.jpeg)
 
 </details>
 
