@@ -123,7 +123,9 @@ It presents key business indicators including:
 The page also introduces the project scope, covering Business Analytics, Machine Learning, and interactive Streamlit deployment.
 
 <details>
-<summary>▶️ Click to show Streamlit Overview</summary>
+   
+<summary> ▶️ Click to show Streamlit Overview</summary>
+
 
 ![Streamlit Overview](images/streamlit-overview.png)
 
@@ -144,7 +146,9 @@ Key insights include:
 These visualizations help transform transactional data into actionable business insights.
 
 <details>
-<summary>▶️ Click to show Business Analytics</summary>
+   
+<summary> ▶️ Click to show Business Analytics</summary>
+
 
 ![Streamlit Analytics](images/streamlit-analytics.png)
 
@@ -172,7 +176,9 @@ The deployed model is **Linear Regression**, with performance evaluated using:
 - **R²** — Coefficient of Determination
 
 <details>
-<summary>▶️ Click to show Machine Learning</summary>
+   
+<summary> ▶️ Click to show Machine Learning</summary>
+
 
 ![Streamlit Machine Learning](images/streamlit-machine-learning.png)
 
@@ -205,7 +211,9 @@ After submitting the transaction profile, the deployed machine learning model ge
 This demonstrates the transition from analytical modeling to an interactive, user-facing machine learning application.
 
 <details>
-<summary>▶️ Click to show Margin Prediction</summary>
+   
+<summary> ▶️ Click to show Margin Prediction</summary>
+
 
 ![Streamlit Prediction](images/streamlit-prediction.png)
 
@@ -214,18 +222,22 @@ This demonstrates the transition from analytical modeling to an interactive, use
 ### 💰 Profitability & Sales Performance
 
 <details>
-<summary>▶️ Click to show Profitability & Sales Performance</summary>
+   
+<summary> ▶️ Click to show Profitability & Sales Performance</summary>
 
-![Profitability & Sales Performance](images/powerbi-profitability-sales.jpg)
+
+![Profitability & Sales Performance](images/powerbi-profitability-sales.jpeg)
 
 </details>
 
 ### 📦 Inventory & Stock Performance
 
 <details>
-<summary>▶️ Click to show Inventory & Stock Performance</summary>
+   
+<summary> ▶️ Click to show Inventory & Stock Performance</summary>
 
-![Inventory & Stock Performance](images/powerbi-inventory-stock.jpg)
+
+![Inventory & Stock Performance](images/powerbi-inventory-stock.jpeg)
 
 </details>
 
